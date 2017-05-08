@@ -13,6 +13,8 @@ function bla = main(absolute_folder)
         [new_imc, bla2] = imTrans(im1, H_truth);
         subplot(1,2,1), imshow(new_im1);
         subplot(1,2,2), imshow(new_imc);
+        msg = sprintf('Frobenius error for images %d y %d = %f', 1, cnt, norm(H - H_truth, 'fro'));
+        disp(msg);
         pause(2);
         
     end
